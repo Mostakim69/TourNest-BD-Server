@@ -1,7 +1,5 @@
-// src/App/modules/users/users.controller.js
 import sendResponse from "../../utils/sendResponse.js";
 import { UserServices } from "./users.service.js";
-// src/App/modules/users/users.controller.js
 const createUser = async (req, res, next) => {
   try {
     const result = await UserServices.createUserIntoDB(req.body);
@@ -21,20 +19,6 @@ const createUser = async (req, res, next) => {
   }
 };
 
-/* const getAllUsers = async (req, res, next) => {
-  try {
-    const result = await UserServices.getAllUsersFromDB();
-    sendResponse(res, {
-      statusCode: 200,
-      success: true,
-      message: "Users retrieved successfully!",
-      data: result,
-    });
-  } catch (error) {
-    next(error);
-  }
-};
- */
 
 const getAllUsers = async (req, res, next) => {
   try {

@@ -10,14 +10,14 @@
 │   ├── deployment.md
 │   ├── refractorDocsPrompt.md
 │   └── Requirement.md
-├── hurlNvimShowcase.mp4
 ├── package.json
 ├── README.md
 ├── src
 │   ├── App
 │   │   ├── config
 │   │   │   ├── corsOptions.js
-│   │   │   └── db.js
+│   │   │   ├── db.js
+│   │   │   └── stripe.js
 │   │   ├── middlewires
 │   │   │   ├── globalError.js
 │   │   │   ├── notFound.js
@@ -45,6 +45,7 @@
 │   │   │   │   ├── bookings.route.js
 │   │   │   │   └── bookings.service.js
 │   │   │   ├── packages
+│   │   │   │   ├── packageData.json
 │   │   │   │   ├── package.model.js
 │   │   │   │   ├── packagesApi.hurl
 │   │   │   │   ├── packages.controller.js
@@ -56,10 +57,14 @@
 │   │   │   │   ├── payments.controller.js
 │   │   │   │   ├── payments.model.js
 │   │   │   │   ├── payments.route.js
-│   │   │   │   └── payments.service.js
+│   │   │   │   ├── payments.service.js
+│   │   │   │   └── refractorPaymentsPrompt.md
 │   │   │   ├── stories
+│   │   │   │   ├── refractorStoriesPrompt.md
 │   │   │   │   ├── storiesApi.hurl
 │   │   │   │   ├── stories.controller.js
+│   │   │   │   ├── storiesData2.json
+│   │   │   │   ├── storiesData.json
 │   │   │   │   ├── stories.model.js
 │   │   │   │   ├── stories.route.js
 │   │   │   │   └── stories.service.js
@@ -72,6 +77,7 @@
 │   │   │   │   ├── submission.service.js
 │   │   │   │   └── submission.validation.js
 │   │   │   ├── tourGuideRequest
+│   │   │   │   ├── refractorTourGuideRequestPrompt.md
 │   │   │   │   ├── tourGuideRequestApi.hurl
 │   │   │   │   ├── tourGuideRequest.controller.js
 │   │   │   │   ├── tourGuideRequest.model.js
@@ -97,6 +103,6 @@
 ├── structure.md
 └── vercel.json
 
-20 directories, 75 files
+20 directories, 82 files
 
 ```

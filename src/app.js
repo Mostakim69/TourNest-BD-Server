@@ -20,7 +20,7 @@ routes.forEach(({ path, route }) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Assalamu alaikum, Welcome to the DeshGuide server !");
+  res.send("Assalamu alaikum, Welcome to the Tour-Nest-BD server !");
 });
 
 app.use(globalErrorHandler);

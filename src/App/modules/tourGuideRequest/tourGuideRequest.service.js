@@ -23,29 +23,9 @@ const getTourGuideRequestById = async (id) => {
   return await TourGuideRequest.findById(id).populate("userId");
 };
 
-/* const updateTourGuideRequestStatus = async (id, status) => {
-  const res = await TourGuideRequest.findByIdAndUpdate(
-    id,
-    { status },
-    { new: true },
-  );
-
-  console.log(res, "tourGuideRequest.service.js", 27);
-  if (res?.status === "accepted") {
-    const userRoleChanged = await User.updateOne(
-      { _id: res.userId },
-      { role: "tour-guide" },
-      { new: true },
-    );
-    console.log(
-      userRoleChanged,
-      "user role changed tourGuideRequest.service.js",
-      35,
-    );
-  }
-
-  return res;
-}; */
+const getTourGuideRequestByUserId = async (userId) => {
+  return await TourGuideRequest.findOne({ userId }).populate("userId");
+};
 
 const updateTourGuideRequestStatus = async (id, status) => {
   console.log(id, status, " id status tourGuideRequest.service.js", 51);
@@ -109,6 +89,7 @@ const getRandomAcceptedTourGuides = async (limit = 6) => {
         "user.name": 1,
         "user.email": 1,
         "user.photo": 1,
+        "user._id": 1,
       },
     },
   );
@@ -122,4 +103,5 @@ export const TourGuideRequestServices = {
   updateTourGuideRequestStatus,
   deleteTourGuideRequest,
   getRandomAcceptedTourGuides,
+  getTourGuideRequestByUserId,
 };

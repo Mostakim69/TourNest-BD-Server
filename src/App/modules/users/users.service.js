@@ -1,7 +1,5 @@
-// src/App/modules/users/users.service.js
 import { User } from "./users.model.js";
-// ✅ Get All Users
-// src/App/modules/users/users.service.js
+
 const createUserIntoDB = async (data) => {
   const existingUser = await User.findOne({ email: data?.email });
 
@@ -36,14 +34,6 @@ const getAllTourGuidesFromDB = async () => {
 
   return guides;
 };
-// ✅ Get All Users
-/* const getAllUsersFromDB = async () => {
-  const res = await User.find().sort({ createdAt: -1 });
-  if (!res) {
-    throw new Error("User not found");
-  }
-  return res;
-}; */
 
 const getAllUsersFromDB = async (filters = {}) => {
   const { searchTerm, role } = filters;
